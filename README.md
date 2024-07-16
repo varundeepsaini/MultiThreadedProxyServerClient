@@ -19,7 +19,7 @@ This project is implemented using `C` and Parsing of HTTP referred from <a href 
 
 ##### How did we implement Multi-threading?
 - Used Semaphore instead of Condition Variables and pthread_join() and pthread_exit() function. 
-- pthread_join() requires us to pass the thread id of the the thread to wait for. 
+- pthread_join() requires us to pass the thread ID of the thread to wait for. 
 - Semaphore’s sem_wait() and sem_post() doesn’t need any parameter. So it is a better option. 
 
 ##### Motivation/Need of Project
@@ -42,7 +42,7 @@ This project is implemented using `C` and Parsing of HTTP referred from <a href 
 
 ##### Limitations ​
 - If a URL opens multiple clients itself, then our cache will store each client’s response as a separate element in the linked list. So, during retrieval from the cache, only a chunk of response will be send and the website will not open
-- Fixed size of cache element, so big websites may not be stored in cache. 
+- The fixed size of the cache element, so big websites may not be stored in the cache. 
 
 ##### How this project can be extended? ​
 - This code can be implemented using multiprocessing that can speed up the process with parallelism.
@@ -62,11 +62,3 @@ $ ./proxy <port no.>
 # Note:
 - This code can only be run in Linux Machine. Please disable your browser cache.
 - To run the proxy without cache Change the name of the file (`proxy_server_with_cache.c to proxy_server_without_cache.c`) MakeFile.
-
-## Contributing
-
-[[Back to top]](https://github.com/varundeepsaini/MultiThreadedProxyServerClient#index)
-
-Feel free to add some useful. You can see `How this code can be extended`. Use ideas from there and feel free to fork and CHANGE. 
-
-#### Enjoy CODE and pull requests are highly appreciated.
